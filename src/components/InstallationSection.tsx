@@ -18,7 +18,7 @@ export const InstallationSection: React.FC<InstallationSectionProps> = ({ theme 
   };
 
   return (
-    <section id="docs" className="max-w-7xl mx-auto px-6 py-20">
+    <section id="api" className="max-w-7xl mx-auto px-6 py-20">
       <div className={`${getCardBg()} backdrop-blur-sm rounded-3xl p-12 border border-gray-200/20`}>
         <h2 className={`text-3xl font-bold text-center mb-12 ${getTextColor()}`}>Quick Start</h2>
         

@@ -18,7 +18,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="relative z-10 border-b border-gray-200/20 backdrop-blur-sm">
+    <header className="relative z-10 border-b border-gray-200/20 backdrop-blur-sm animate-slide-up">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo and Title */}

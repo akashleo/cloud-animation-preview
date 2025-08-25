@@ -5,7 +5,9 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { DemoSection } from './components/DemoSection';
 import { FeaturesSection } from './components/FeaturesSection';
+import { DocsSection } from './components/DocsSection';
 import { InstallationSection } from './components/InstallationSection';
+import { Footer } from './components/Footer';
 
 // Main App Component
 function AppContent() {
@@ -28,7 +30,9 @@ function AppContent() {
       )}
 
       {/* Navbar */}
-      <Navbar theme={theme} isUserControlled={isUserControlled} />
+      <div className="animate-slide-up">
+        <Navbar />
+      </div>
 
       {/* Main Content */}
       <main className="relative z-10">
@@ -36,18 +40,22 @@ function AppContent() {
         <HeroSection theme={theme} />
 
         {/* Demo Section */}
-        <DemoSection 
-          theme={theme} 
-          backgroundEffect={backgroundEffect} 
-          toggleBackgroundEffect={toggleBackgroundEffect} 
-        />
+        <DemoSection />
 
         {/* Features Section */}
         <FeaturesSection theme={theme} />
 
-        {/* Installation Section */}
-        <InstallationSection theme={theme} />
+         {/* Installation Section */}
+         <InstallationSection theme={theme} />
+
+        {/* Docs Section */}
+        <DocsSection />
+
+       
       </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
