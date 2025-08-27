@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Download, Github } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -6,6 +6,21 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
+  const [downloadCount, setDownloadCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    const fetchDownloadCount = async () => {
+      try {
+        const response = await fetch('https://api.npmjs.org/downloads/point/last-year/react-cloud-animation');
+        const data = await response.json();
+        setDownloadCount(data.downloads);
+      } catch (error) {
+        console.error('Error fetching download count:', error);
+      }
+    };
+
+    fetchDownloadCount();
+  }, []);
   const getTextColor = () => {
     if (theme === 'dark') return 'text-white';
     if (theme === 'dusk') return 'text-white';
@@ -39,12 +54,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
 
       {/* Action Buttons */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 mb-16">
-        <button className="flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg shadow-blue-200">
+        <a href="https://www.npmjs.com/package/react-cloud-animation" target="_blank"
+              rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg shadow-blue-200">
           <Download className="w-5 h-5" />
           npm install react-cloud-animation
-        </button>
+        </a>
         <a
-          href="https://github.com"
+          href="https://github.com/akashleo/react-cloud-animation"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 px-8 py-4 border-2 border-gray-300 rounded-xl hover:border-gray-400 transition-all transform hover:scale-105"
@@ -57,7 +73,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ theme }) => {
       {/* Statistics */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
         <div className="text-center">
-          <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-2">1.2K+</div>
+          <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-2">
+            {downloadCount ? new Intl.NumberFormat().format(downloadCount) : '...'}
+          </div>
           <div className={`text-lg ${getSubtextColor()}`}>Downloads</div>
         </div>
         <div className="text-center">

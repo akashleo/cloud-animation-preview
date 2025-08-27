@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
             <ThemeToggle size={5} />
 
             <a
-              href="https://github.com"
+              href="https://github.com/akashleo/react-cloud-animation"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
