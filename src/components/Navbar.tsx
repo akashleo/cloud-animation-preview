@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="relative z-10 border-b border-gray-200/20 backdrop-blur-sm animate-slide-up w-full">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200/20 backdrop-blur-sm animate-slide-up w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo and Title */}
@@ -27,9 +27,12 @@ export const Navbar: React.FC = () => {
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
               <Cloud className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
             </div>
-            <div className="hidden sm:block">
-              <h1 className={`text-lg sm:text-xl font-bold ${getTextColor()}`}>React Cloud Animation</h1>
-              <p className="text-xs sm:text-sm text-gray-500">v0.0.4</p>
+            <div className="sm:block">
+              <div className="flex items-center gap-2">
+                <h1 className={`text-sm sm:text-md font-bold ${getTextColor()}`}>React Cloud Animation</h1>
+                <span className="text-xs px-1.5 py-0.5 bg-gray-200/20 rounded text-gray-500 sm:hidden">v0.0.5</span>
+              </div>
+              <p className="text-xs sm:text-sm text-gray-500 hidden sm:block">v0.0.5</p>
             </div>
           </div>
 

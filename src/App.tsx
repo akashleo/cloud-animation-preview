@@ -35,7 +35,7 @@ function AppContent() {
       </div>
 
       {/* Main Content */}
-      <main className="relative z-10">
+      <main className="relative z-10 pt-[120px] md:pt-[80px]">
         {/* Hero Section */}
         <HeroSection theme={theme} />
 
