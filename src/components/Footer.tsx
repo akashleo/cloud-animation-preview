@@ -24,9 +24,9 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className={`relative z-10 border-t ${getBorderColor()} backdrop-blur-sm`}>
-      <div className="max-w-7xl mx-auto px-6 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         <div className="text-center">
-          <p className={`text-sm ${getSecondaryTextColor()}`}>
+          <p className={`text-xs sm:text-sm ${getSecondaryTextColor()}`}>
             Made with <span className="text-red-500">♥</span> by{' '}
             <span className={`font-semibold ${getTextColor()}`}>Akash Ghosh</span>
           </p>

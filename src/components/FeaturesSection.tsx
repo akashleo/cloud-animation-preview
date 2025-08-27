@@ -46,17 +46,17 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ theme }) => {
   ];
 
   return (
-    <section id="features" className="max-w-7xl mx-auto px-6 py-20">
-      <h2 className={`text-3xl font-bold text-center mb-16 ${getTextColor()}`}>Features</h2>
+    <section id="features" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+      <h2 className={`text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 ${getTextColor()}`}>Features</h2>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {features.map((feature, index) => (
-          <div key={index} className={`${getCardBg()} backdrop-blur-sm rounded-2xl p-8 border border-gray-200/20`}>
-            <div className={`w-12 h-12 ${feature.bgColor} rounded-xl flex items-center justify-center mb-6`}>
+          <div key={index} className={`${getCardBg()} backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-200/20`}>
+            <div className={`w-10 h-10 sm:w-12 sm:h-12 ${feature.bgColor} rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6`}>
               {feature.icon}
             </div>
-            <h3 className={`text-xl font-semibold mb-4 ${getTextColor()}`}>{feature.title}</h3>
-            <p className={getSubtextColor()}>
+            <h3 className={`text-lg sm:text-xl font-semibold mb-3 sm:mb-4 ${getTextColor()}`}>{feature.title}</h3>
+            <p className={`${getSubtextColor()} text-sm sm:text-base`}>
               {feature.description}
             </p>
           </div>

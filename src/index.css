@@ -17,3 +17,9 @@
 .animate-slide-up {
   animation: slide-up 0.6s ease-out;
 }
+
+/* Prevent horizontal overflow from animated elements */
+html, body, #root {
+  width: 100%;
+  overflow-x: hidden;
+}

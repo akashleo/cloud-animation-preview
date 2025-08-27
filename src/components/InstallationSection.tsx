@@ -18,25 +18,25 @@ export const InstallationSection: React.FC<InstallationSectionProps> = ({ theme 
   };
 
   return (
-    <section id="api" className="max-w-7xl mx-auto px-6 py-20">
-      <div className={`${getCardBg()} backdrop-blur-sm rounded-3xl p-12 border border-gray-200/20`}>
-        <h2 className={`text-3xl font-bold text-center mb-12 ${getTextColor()}`}>Quick Start</h2>
+    <section id="api" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+      <div className={`${getCardBg()} backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 border border-gray-200/20`}>
+        <h2 className={`text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 ${getTextColor()}`}>Quick Start</h2>
         
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           <div>
-            <h3 className={`text-xl font-semibold mb-6 ${getTextColor()}`}>Installation</h3>
+            <h3 className={`text-lg sm:text-xl font-semibold mb-4 sm:mb-6 ${getTextColor()}`}>Installation</h3>
             <div className="bg-gray-900 rounded-xl p-6 overflow-x-auto">
-              <code className="text-green-400 text-lg">npm install react-cloud-animation</code>
+              <code className="text-green-400 text-sm sm:text-base lg:text-lg">npm install react-cloud-animation</code>
             </div>
-            <div className="mt-4 bg-gray-900 rounded-xl p-6 overflow-x-auto">
-              <code className="text-green-400 text-lg">yarn add react-cloud-animation</code>
+            <div className="mt-3 sm:mt-4 bg-gray-900 rounded-lg sm:rounded-xl p-4 sm:p-6 overflow-x-auto">
+              <code className="text-green-400 text-sm sm:text-base lg:text-lg">yarn add react-cloud-animation</code>
             </div>
           </div>
 
           <div>
-            <h3 className={`text-xl font-semibold mb-6 ${getTextColor()}`}>Usage</h3>
+            <h3 className={`text-lg sm:text-xl font-semibold mb-4 sm:mb-6 ${getTextColor()}`}>Usage</h3>
             <div className="bg-gray-900 rounded-xl p-6 overflow-x-auto">
-              <pre className="text-sm">
+              <pre className="text-xs sm:text-sm">
                 <code className="text-gray-300">
                   <span className="text-blue-400">import</span> <span className="text-yellow-300">{'{'}</span>
                   {'\n  '}
@@ -81,19 +81,19 @@ export const InstallationSection: React.FC<InstallationSectionProps> = ({ theme 
           </div>
         </div>
 
-        <div className="mt-12">
-          <h3 className={`text-xl font-semibold mb-6 ${getTextColor()}`}>Theme System</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+        <div className="mt-8 sm:mt-12">
+          <h3 className={`text-lg sm:text-xl font-semibold mb-4 sm:mb-6 ${getTextColor()}`}>Theme System</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="bg-gray-900 rounded-xl p-4">
-              <div className="text-yellow-400 font-semibold mb-2">🌅 Light Theme</div>
-              <div className="text-gray-300 text-sm">6:00 AM - 2:00 PM</div>
+              <div className="text-yellow-400 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">🌅 Light Theme</div>
+              <div className="text-gray-300 text-xs sm:text-sm">6:00 AM - 2:00 PM</div>
             </div>
             <div className="bg-gray-900 rounded-xl p-4">
-              <div className="text-purple-400 font-semibold mb-2">🌆 Dusk Theme</div>
+              <div className="text-purple-400 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">🌆 Dusk Theme</div>
               <div className="text-gray-300 text-sm">2:00 PM - 8:00 PM</div>
             </div>
             <div className="bg-gray-900 rounded-xl p-4">
-              <div className="text-blue-400 font-semibold mb-2">🌙 Dark Theme</div>
+              <div className="text-blue-400 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">🌙 Dark Theme</div>
               <div className="text-gray-300 text-sm">8:00 PM - 6:00 AM</div>
             </div>
           </div>

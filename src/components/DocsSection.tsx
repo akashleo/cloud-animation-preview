@@ -29,15 +29,15 @@ export const DocsSection: React.FC = () => {
   };
 
   return (
-    <section id="docs" className="max-w-7xl mx-auto px-6 py-20">
-      <div className={`${getCardBg()} backdrop-blur-sm rounded-2xl p-8 border border-gray-200/20`}>
+    <section id="docs" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+      <div className={`${getCardBg()} backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-200/20`}>
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className={`text-4xl font-bold ${getTextColor()} mb-4`}>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${getTextColor()} mb-4`}>
               React Cloud Animation
             </h2>
-            <p className={`text-lg ${getSecondaryTextColor()}`}>
+            <p className={`text-sm sm:text-base lg:text-lg ${getSecondaryTextColor()} px-2`}>
               An interactive cloud animation system with theme-aware backgrounds for React applications. 
               Features smooth marquee-style cloud movements, automatic time-based theming, and customizable animations.
             </p>
@@ -45,8 +45,8 @@ export const DocsSection: React.FC = () => {
 
           {/* Features */}
           <div className="mb-12">
-            <h3 className={`text-2xl font-bold ${getTextColor()} mb-6`}>Features</h3>
-            <div className="grid md:grid-cols-2 gap-4">
+            <h3 className={`text-xl sm:text-2xl font-bold ${getTextColor()} mb-4 sm:mb-6`}>Features</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               {[
                 '🌤️ Animated Clouds - 5 clouds with continuous marquee movement',
                 '🎨 Theme System - Dark, Light, and Dusk themes with automatic time-based switching',
@@ -57,7 +57,7 @@ export const DocsSection: React.FC = () => {
                 '🎨 Customizable - Configure colors, speeds, and cloud images',
                 '♿ Accessible - Full keyboard navigation and screen reader support'
               ].map((feature, index) => (
-                <div key={index} className={`${getSecondaryTextColor()} flex items-start gap-2`}>
+                <div key={index} className={`${getSecondaryTextColor()} flex items-start gap-2 text-sm sm:text-base`}>
                   <span>{feature}</span>
                 </div>
               ))}
@@ -67,7 +67,7 @@ export const DocsSection: React.FC = () => {
           {/* Installation */}
           <div className="mb-12">
             <h3 className={`text-2xl font-bold ${getTextColor()} mb-6`}>Installation</h3>
-            <div className={`${getCodeBg()} rounded-lg p-4 font-mono text-sm`}>
+            <div className={`${getCodeBg()} rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm overflow-x-auto`}>
               <div className={getTextColor()}>npm install react-cloud-animation</div>
               <div className={`${getSecondaryTextColor()} mt-2`}># or</div>
               <div className={getTextColor()}>yarn add react-cloud-animation</div>
@@ -77,7 +77,7 @@ export const DocsSection: React.FC = () => {
           {/* Quick Start */}
           <div className="mb-12">
             <h3 className={`text-2xl font-bold ${getTextColor()} mb-6`}>Quick Start</h3>
-            <div className={`${getCodeBg()} rounded-lg p-4 font-mono text-sm overflow-x-auto`}>
+            <div className={`${getCodeBg()} rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm overflow-x-auto`}>
               <pre className={getTextColor()}>
 {`import { ThemeProvider, CloudAnimation, ThemeToggle, CloudToggleButton } from 'react-cloud-animation';
 import 'react-cloud-animation/dist/style.css';
